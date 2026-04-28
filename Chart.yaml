@@ -1,0 +1,12 @@
+apiVersion: v2
+name: magnum
+description: A Helm chart for magnum
+type: application
+version: 0.1.0
+appVersion: 17.0.2-16-g6e880925-10-26
+sources:
+  - https://github.com/NeCTAR-RC/magnum-helm.git
+dependencies:
+- name: nectarlib
+  version: 3.2.0
+  repository: oci://registry.rc.nectar.org.au/nectar-helm
