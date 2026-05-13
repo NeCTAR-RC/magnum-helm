@@ -31,9 +31,11 @@ policy_file=/etc/magnum/policy.yaml
 connection_recycle_time=600
 
 [oslo_messaging_rabbit]
-amqp_durable_queues=True
-heartbeat_in_pthread=False
 ssl=True
+rabbit_quorum_queue=true
+rabbit_transient_quorum_queue=true
+rabbit_stream_fanout=true
+rabbit_qos_prefetch_count=1
 
 [keystone_authtoken]
 auth_url={{ .Values.conf.keystone.auth_url }}
