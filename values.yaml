@@ -24,10 +24,9 @@ vault:
 
 api:
   port: 9511
-  command:
-    - magnum-api
-  apache:
-    enabled: false
+  uwsgi:
+    enabled: true
+    module: magnum.wsgi.api:application
   image:
     repository: registry.rc.nectar.org.au/kolla/ubuntu-source-magnum-api
   replicaCount: 1
@@ -48,8 +47,6 @@ api:
     # requests:
     #   cpu: 100m
     #   memory: 128Mi
-  ingress:
-    enabled: false
   gateway:
     enabled: false
     annotations: {}
