@@ -2,8 +2,8 @@ apiVersion: v2
 name: magnum
 description: A Helm chart for magnum
 type: application
-version: 1.2.0
-appVersion: 22.0.0-3-g0e13b37d-3-3
+version: 1.2.1
+appVersion: 22.0.0-6-gc4b6d7d9-3-6
 sources:
   - https://github.com/NeCTAR-RC/magnum-helm.git
 dependencies:
