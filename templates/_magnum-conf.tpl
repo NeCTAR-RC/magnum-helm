@@ -12,6 +12,10 @@ trustee_keystone_interface=public
 [quotas]
 max_clusters_per_project={{ .Values.conf.quotas.max_clusters_per_project }}
 
+[cluster_template]
+kubernetes_allowed_network_drivers=cilium,calico
+kubernetes_default_network_driver=calico
+
 [api]
 port={{ .Values.api.port }}
 host=0.0.0.0
