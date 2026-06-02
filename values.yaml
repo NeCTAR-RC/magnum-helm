@@ -94,7 +94,6 @@ job:
 oslo_policy:
   certificate:create: 'rule:admin_or_project_member_user or rule:cluster_user'
   certificate:get: 'rule:admin_or_project_reader_user or rule:cluster_user'
-  cluster:upgrade: 'rule:context_is_admin or role:mks_admin'
 
 image:
   pullPolicy: IfNotPresent
